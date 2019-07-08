@@ -7,7 +7,10 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.join(__dirname, '/dist'),
-		publicPath: '/dist'
+		publicPath: '/dist',
+		library: 'combinatorics',
+		libraryTarget: 'umd',
+		globalObject: 'this'
 	},
 	module: {
 		rules: [{

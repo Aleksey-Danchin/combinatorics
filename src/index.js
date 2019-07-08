@@ -9,6 +9,19 @@ import placement from './placement'
 import byAlphabet from './byAlphabet'
 import multiplication from './multiplication'
 
+export {
+	A,
+	C,
+	P,
+
+	combination,
+	permutation,
+	placement,
+	
+	byAlphabet,
+	multiplication,
+}
+
 export default {
 	A,
 	C,
