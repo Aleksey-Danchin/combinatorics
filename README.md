@@ -3,7 +3,7 @@
 Samples:
 
 ```javascript
-import { combination, permutation, placement } from 'combinatorics'
+import { combination, permutation, placement, byAlphabet, multiplication, A, P, C } from 'combinatorics'
 
 const array = [1, 2, 3]
 const alphabet = ['a', 'b']
