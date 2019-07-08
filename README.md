@@ -1,4 +1,16 @@
+The `combinatorics` library is used to:
+
+1. work with iterations in the cycle
+2. create a collection of all possible iterations
+3. counting Mathematical Models
+
 ![combinatorics](https://pp.userapi.com/c854324/v854324191/53046/7kGFZYy3XbI.jpg)
+
+npm installing:
+
+```
+:~$ npm installhttps://github.com/Aleksey-Danchin/combinatorics
+```
 
 Samples:
 

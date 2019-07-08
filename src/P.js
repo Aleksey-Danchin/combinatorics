@@ -23,9 +23,11 @@ function P (n) {
 		case 18: return 6402373705728000
 		case 19: return 121645100408832000
 		case 20: return 2432902008176640000
+		case 21: return 51090942171709440000
+		case 22: return 1124000727777607680000
 	}
 
-	return n * P(n)
+	return n * P(n - 1)
 }
 
 export default P
