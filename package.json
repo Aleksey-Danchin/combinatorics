@@ -6,7 +6,8 @@
   "module": "src/index.js",
   "scripts": {
     "test": "mocha --require @babel/register",
-    "babel": "babel src --out-dir lib"
+    "babel": "babel src --out-dir lib",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
