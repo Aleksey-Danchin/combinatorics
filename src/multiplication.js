@@ -1,22 +1,20 @@
 function * multiplication (...originalArrays) {
-	if (originalArrays.length === 0) {
-		return []
+	const sources = originalArrays
+		.map(array => array.slice())
+		.filter(array => array.length)
+
+	if (sources.length === 0) {
+		return yield []
 	}
 
-	const sources = originalArrays.map(x => x.slice())
 	const indexes = Array(sources.length).fill(0)
-	let isLast = false
 
 	while (true) {
-		const array = indexes.map((e, i) => sources[i][e])
+		yield indexes.map((e, i) => sources[i][e])
 
-		if (isLast) {
-			return array
-		} else {
-			yield array
+		if (incr()) {
+			return
 		}
-
-		isLast = incr()
 	}
 
 	function incr () {

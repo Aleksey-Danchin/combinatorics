@@ -1,4 +1,3 @@
-import A from './A'
 import P from './P'
 
 function C (k, n) {
@@ -12,7 +11,7 @@ function C (k, n) {
 		n = d
 	}
 
-	return A(k, n) / P(k)
+	return n - k > n ? P(k, n) / P(n) : P(n - k, n) / P(k)
 }
 
 export default C

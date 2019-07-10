@@ -1,3 +1,5 @@
+import P from './P'
+
 function A (k, n) {
 	if (n === k) {
 		return 1
@@ -9,13 +11,7 @@ function A (k, n) {
 		n = d
 	}
 
-	let result = 1
-
-	for (let i = k + 1; i <= n; i++) {
-		result *= i
-	}
-
-	return result
+	return P(n) / P(k)
 }
 
 export default A

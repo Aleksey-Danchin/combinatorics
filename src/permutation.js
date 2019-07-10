@@ -2,11 +2,11 @@ function * permutation (originalArray = []) {
 	const array = originalArray.slice()
 
 	if (array.length === 0) {
-		return
+		return yield []
 	}
 
 	if (array.length === 1) {
-		return array
+		return yield array
 	}
 
 	yield * itter([], array)

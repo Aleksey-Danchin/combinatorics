@@ -1,18 +1,16 @@
-function * placement (originalArray = [], n = 1) {
+function * placement (originalArray = [], size = 1) {
 	const array = originalArray.slice()
 
-	if (n < 1) {
-		return []
+	if (size < 1) {
+		return yield []
 	}
 
-	if (n === array.length) {
-		return array
-	}
+	size = Math.min(size, array.length)
 
-	yield * itter([], array, n)
+	yield * itter([], array, size)
 
-	function * itter (sample, bank, n) {
-		if (n === 0) {
+	function * itter (sample, bank, count) {
+		if (count === 0) {
 			yield sample
 		}
 
@@ -23,7 +21,7 @@ function * placement (originalArray = [], n = 1) {
 			yield * itter(
 				[...sample, bank[index]],
 				subBank,
-				n - 1
+				count - 1
 			)
 		}
 	}
