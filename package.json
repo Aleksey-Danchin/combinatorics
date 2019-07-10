@@ -5,8 +5,9 @@
   "main": "dist/combinatorics.js",
   "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel src --out-dir lib"
+    "test": "mocha --require @babel/register",
+    "babel": "babel src --out-dir lib",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "@babel/preset-env": "^7.5.0",
     "@babel/runtime": "^7.5.1",
     "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
   }

@@ -2,22 +2,17 @@ function * byAlphabet (originalArray = [], size = 1) {
 	const alphabet = originalArray.slice()
 
 	if (alphabet.length === 0 || size < 1) {
-		return []
+		return yield []
 	}
 
 	const indexes = Array(size).fill(0)
-	let isLast = false
 
 	while (true) {
-		const array = indexes.map(i => alphabet[i])
+		yield indexes.map(i => alphabet[i])
 
-		if (isLast) {
-			return array
-		} else {
-			yield array
+		if (incr()) {
+			return
 		}
-
-		isLast = incr()
 	}
 
 	function incr () {

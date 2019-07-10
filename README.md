@@ -3,19 +3,30 @@ The `combinatorics` library is used to:
 1. work with iterations in the cycle
 2. create a collection of all possible iterations
 3. counting Mathematical Models
+4. [Run online](https://repl.it/@Aleksey_Danchin/combinatoricssamples)
 
 ![combinatorics](https://pp.userapi.com/c854324/v854324191/53046/7kGFZYy3XbI.jpg)
 
-npm installing:
+Using npm:
 
 ```
 :~$ npm installhttps://github.com/Aleksey-Danchin/combinatorics
 ```
 
+In a browser:
+
+```javascript
+<script src="https://cdn.jsdelivr.net/gh/Aleksey-Danchin/combinatorics@master/dist/combinatorics.js"></script>
+```
+
 Samples:
 
 ```javascript
+// node.js
 import { combination, permutation, placement, byAlphabet, multiplication, A, P, C } from 'combinatorics'
+
+// browser
+const { combination, permutation, placement, byAlphabet, multiplication, A, P, C } = combinatorics
 
 const array = [1, 2, 3]
 const alphabet = ['a', 'b']
