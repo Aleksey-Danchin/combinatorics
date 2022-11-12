@@ -30,6 +30,6 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.12"
   }
 }
